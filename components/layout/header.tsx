@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, Globe, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -28,21 +29,21 @@ export function Header() {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className={`fixed top-0 z-50 w-full transition-all duration-300 ${
         isScrolled
-          ? "bg-white/80 backdrop-blur-xl border-b border-sky-100/50 shadow-sm rounded-md"
-          : "bg-white/60 backdrop-blur-sm rounded-md"
+          ? "bg-white/80 backdrop-blur-xl border-b border-sky-100/50 shadow-sm"
+          : "bg-white/90 backdrop-blur-sm"
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 rounded-md">
         <div className="flex h-16 lg:h-18 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3 group">
-            <div className="relative">
-              <div className="h-8 w-8 lg:h-9 lg:w-9 rounded-md bg-gradient-to-br from-sky-600 to-sky-700 shadow-sm transition-transform duration-200 group-hover:scale-105" />
-              <div className="absolute inset-0 h-8 w-8 lg:h-9 lg:w-9 rounded-md bg-gradient-to-br from-sky-400 to-sky-500 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
-            </div>
-            <span className="text-xl lg:text-2xl font-semibold bg-gradient-to-r from-slate-900 to-sky-700 bg-clip-text text-transparent">
-              {siteConfig.name}
-            </span>
+            <Image
+              src="./logo.png"
+              alt="AJAB Tech Logo"
+              width={40}
+              height={40}
+              className="h-20 w-48"
+            />
           </Link>
 
           {/* Desktop Navigation */}
