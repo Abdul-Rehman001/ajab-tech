@@ -8,6 +8,7 @@ import {
   TrendingUp,
   Clock,
   ArrowRight,
+  ChevronRight,
 } from "lucide-react";
 
 // Sample data - replace with your siteConfig.whyChooseUs
@@ -59,42 +60,51 @@ const iconMap = {
 
 export function WhyChooseUs() {
   return (
-    <section className="py-24 bg-gradient-to-br from-gray-900 via-slate-900 to-gray-800 relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `radial-gradient(circle at 25% 25%, white 2px, transparent 2px)`,
-            backgroundSize: "40px 40px",
-          }}
-        ></div>
+    <section className="relative py-24 bg-gradient-to-br from-slate-50 via-blue-50 to-white overflow-hidden">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 opacity-40">
+        <div className="absolute top-20 left-20 w-72 h-72 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
+        <div className="absolute top-60 right-20 w-96 h-96 bg-purple-100 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-1000"></div>
+        <div className="absolute bottom-20 left-1/2 w-80 h-80 bg-blue-50 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-500"></div>
       </div>
 
-      <div className="container mx-auto px-4 relative z-10 max-w-7xl">
+      {/* Grid Pattern Overlay */}
+      <div
+        className="absolute inset-0 opacity-20 pointer-events-none"
+        style={{
+          backgroundImage: `
+            linear-gradient(rgba(14, 165, 233, 0.3) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(14, 165, 233, 0.3) 1px, transparent 1px)
+          `,
+          backgroundSize: "20px 20px",
+          zIndex: 0,
+        }}
+      ></div>
+
+      <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl z-10">
         {/* Header Section */}
         <div className="text-center mb-20">
-          <div className="inline-flex items-center px-4 py-2 bg-sky-500/10 border border-sky-500/20 text-sky-400 rounded-full text-sm font-medium mb-6 backdrop-blur-sm">
-            <span className="w-2 h-2 bg-sky-400 rounded-full mr-2 animate-pulse"></span>
+          <div className="inline-flex items-center px-3 py-1 rounded-md bg-blue-50 text-blue-700 text-xs font-medium mb-6 border border-blue-100">
+            <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2" />
             Why Choose AJAB Tech
           </div>
 
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            <span className="text-white">Your Trusted</span>
-            <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-blue-400 to-cyan-400">
-              Middle East IT Ally
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-semibold mb-6 leading-tight">
+            <span className="bg-gradient-to-r from-slate-900 to-blue-700 bg-clip-text text-transparent">
+              Your Trusted
             </span>
+            <br />
+            <span className="text-blue-600">Middle East IT Partner</span>
           </h2>
 
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto font-light leading-relaxed">
             Partner with industry leaders who understand the unique challenges
             and opportunities of the Middle East technology landscape.
           </p>
         </div>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
           {whyChooseUsData.map((item, index) => {
             const IconComponent = iconMap[item.icon as keyof typeof iconMap];
 
@@ -103,42 +113,39 @@ export function WhyChooseUs() {
                 key={item.title}
                 className="group relative"
                 style={{
-                  animationDelay: `${index * 0.1}s`,
+                  animation: `fadeInUp 0.6s ease-out ${index * 0.1}s both`,
                 }}
               >
                 {/* Card */}
-                <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 h-full hover:bg-white/10 transition-all duration-500 hover:border-sky-400/30 hover:shadow-2xl hover:shadow-sky-500/10 transform hover:-translate-y-2">
-                  {/* Gradient Border Effect */}
-                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-sky-500/20 via-blue-500/20 to-cyan-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl"></div>
-
+                <div className="relative bg-white/60 backdrop-blur-sm border border-blue-100 rounded-xl p-8 h-full hover:bg-white/80 transition-all duration-300 hover:border-blue-200 hover:shadow-lg group-hover:-translate-y-1">
                   {/* Content */}
                   <div className="relative z-10">
-                    {/* Icon Container */}
+                    {/* Icon Container with Stats Badge */}
                     <div className="relative mb-6">
-                      <div className="w-16 h-16 bg-gradient-to-br from-sky-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center mx-auto backdrop-blur-sm border border-white/10 group-hover:scale-110 transition-transform duration-300">
-                        <IconComponent className="h-8 w-8 text-sky-400 group-hover:text-white transition-colors duration-300" />
+                      <div className="w-16 h-16 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl flex items-center justify-center mx-auto border border-blue-100 group-hover:from-blue-100 group-hover:to-blue-200 group-hover:border-blue-200 transition-all duration-300">
+                        <IconComponent className="h-8 w-8 text-blue-600 group-hover:text-blue-700 transition-colors duration-300" />
                       </div>
 
                       {/* Stats Badge */}
-                      <div className="absolute -top-2 -right-2 px-3 py-1 bg-gradient-to-r from-sky-500 to-blue-500 text-white text-xs font-semibold rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                      <div className="absolute -top-2 -right-2 px-2 py-1 bg-gradient-to-r from-blue-600 to-blue-700 text-white text-xs font-medium rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 shadow-sm">
                         {item.stats}
                       </div>
                     </div>
 
                     {/* Title */}
-                    <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-sky-400 group-hover:to-blue-400 transition-all duration-300">
+                    <h3 className="text-xl font-semibold text-slate-900 mb-4 group-hover:text-blue-700 transition-colors duration-300">
                       {item.title}
                     </h3>
 
                     {/* Description */}
-                    <p className="text-gray-300 leading-relaxed mb-6 group-hover:text-gray-200 transition-colors duration-300">
+                    <p className="text-slate-600 font-light leading-relaxed mb-6">
                       {item.description}
                     </p>
 
                     {/* Learn More Link */}
-                    <div className="flex items-center text-sky-400 font-medium opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                      <span className="mr-2">Learn More</span>
-                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
+                    <div className="flex items-center text-blue-600 font-medium opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                      <span className="mr-2 text-sm">Learn More</span>
+                      <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
                     </div>
                   </div>
                 </div>
@@ -148,35 +155,40 @@ export function WhyChooseUs() {
         </div>
 
         {/* Bottom CTA Section */}
-        <div className="text-center">
-          <div className="inline-flex flex-col md:flex-row items-center gap-6 bg-gradient-to-r from-sky-600/10 to-blue-600/10 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
-            <div className="text-left md:text-center">
-              <h3 className="text-2xl font-bold text-white mb-2">
-                Ready to Transform Your Business?
-              </h3>
-              <p className="text-gray-300">
-                Join hundreds of companies who trust AJAB Tech for their digital
-                transformation journey.
-              </p>
-            </div>
+        <div className="text-center mb-20">
+          <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 sm:p-12 border border-blue-100 shadow-sm max-w-4xl mx-auto">
+            <div className="flex flex-col lg:flex-row items-center gap-8">
+              <div className="flex-1 text-center lg:text-left">
+                <h3 className="text-3xl sm:text-4xl font-semibold mb-4">
+                  <span className="bg-gradient-to-r from-slate-900 to-blue-700 bg-clip-text text-transparent">
+                    Ready to Transform Your{" "}
+                    <span className="text-blue-600">Business?</span>
+                  </span>
+                </h3>
+                <p className="text-slate-600 font-light text-lg">
+                  Join hundreds of companies who trust AJAB Tech for their
+                  digital transformation journey.
+                </p>
+              </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 shrink-0">
-              <button className="group px-8 py-4 bg-gradient-to-r from-sky-600 to-blue-600 text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-sky-500/25 transform hover:-translate-y-1 transition-all duration-300">
-                <span className="flex items-center">
-                  Get Started Today
-                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </span>
-              </button>
+              <div className="flex flex-col sm:flex-row gap-4 shrink-0">
+                <button className="group px-8 py-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-medium rounded-lg transition-all duration-300 shadow-sm hover:shadow-md">
+                  <span className="flex items-center">
+                    Get Started Today
+                    <ChevronRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </button>
 
-              <button className="px-8 py-4 border border-white/20 text-white font-semibold rounded-xl hover:bg-white/5 hover:border-white/30 transition-all duration-300">
-                Schedule Consultation
-              </button>
+                <button className="px-8 py-3 border border-blue-200 text-slate-700 font-medium rounded-lg hover:bg-blue-50 hover:border-blue-300 hover:text-blue-700 transition-all duration-300">
+                  Schedule Consultation
+                </button>
+              </div>
             </div>
           </div>
         </div>
 
         {/* Stats Row */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 pt-16 border-t border-white/10">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-12 border-t border-blue-100">
           {[
             { label: "Projects Delivered", value: "500+" },
             { label: "Years Experience", value: "10+" },
@@ -184,16 +196,29 @@ export function WhyChooseUs() {
             { label: "Client Satisfaction", value: "99%" },
           ].map((stat, index) => (
             <div key={stat.label} className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-400 mb-2">
+              <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent mb-2">
                 {stat.value}
               </div>
-              <div className="text-gray-400 text-sm uppercase tracking-wide">
+              <div className="text-slate-500 text-sm font-medium uppercase tracking-wide">
                 {stat.label}
               </div>
             </div>
           ))}
         </div>
       </div>
+
+      <style jsx>{`
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      `}</style>
     </section>
   );
 }

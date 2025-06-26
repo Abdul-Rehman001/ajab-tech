@@ -66,9 +66,9 @@ export function HeroSlider() {
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
-                className="inline-flex items-center px-3 py-1 rounded-md bg-sky-50 text-sky-700 text-xs font-medium mb-4 border border-sky-100"
+                className="inline-flex items-center px-3 py-1 rounded-md bg-blue-50 text-blue-700 text-xs font-medium mb-4 border border-blue-100"
               >
-                <div className="w-1.5 h-1.5 bg-sky-500 rounded-full mr-2" />
+                <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2" />
                 Professional Services
               </motion.div>
 
@@ -101,12 +101,12 @@ export function HeroSlider() {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="flex flex-col sm:flex-row gap-3"
               >
-                <Button className="bg-sky-600 hover:bg-sky-700 text-white px-6 py-3 text-sm font-medium rounded-md transition-all duration-200">
+                <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 text-sm font-medium rounded-md transition-all duration-200">
                   {slides[currentSlide].cta}
                 </Button>
                 <Button
                   variant="outline"
-                  className="border bg-white border-sky-300 text-sky-600 hover:bg-sky-900 px-6 py-3 text-sm font-medium rounded-md transition-all duration-200 hover:text-white"
+                  className="border bg-white border-blue-300 text-blue-600 hover:bg-blue-900 px-6 py-3 text-sm font-medium rounded-md transition-all duration-200 hover:text-white"
                 >
                   Learn More
                 </Button>
@@ -122,7 +122,7 @@ export function HeroSlider() {
           variant="ghost"
           size="icon"
           onClick={prevSlide}
-          className="w-8 h-8 rounded-md bg-white/20 backdrop-blur-sm text-sky-300 hover:bg-white hover:text-sky-900 shadow-md  transition-all duration-200"
+          className="w-8 h-8 rounded-md bg-white/20 backdrop-blur-sm text-blue-300 hover:bg-white hover:text-blue-900 shadow-md  transition-all duration-200"
         >
           <ChevronLeft className="h-5 w-5" />
         </Button>
@@ -133,7 +133,7 @@ export function HeroSlider() {
           variant="ghost"
           size="icon"
           onClick={nextSlide}
-          className="w-8 h-8 rounded-md bg-white/20 backdrop-blur-sm text-sky-300 hover:bg-white hover:text-sky-900 shadow-md  transition-all duration-200"
+          className="w-8 h-8 rounded-md bg-white/20 backdrop-blur-sm text-blue-300 hover:bg-white hover:text-blue-900 shadow-md  transition-all duration-200"
         >
           <ChevronRight className="h-5 w-5" />
         </Button>
@@ -153,8 +153,8 @@ export function HeroSlider() {
               <div
                 className={`absolute inset-0 rounded-sm transition-all duration-200 ${
                   index === currentSlide
-                    ? "bg-sky-600"
-                    : "bg-white hover:bg-sky-100"
+                    ? "bg-blue-600"
+                    : "bg-white hover:bg-blue-100"
                 }`}
               />
             </button>
@@ -164,10 +164,10 @@ export function HeroSlider() {
 
       {/* Progress Bar */}
       <div className="absolute bottom-0 left-0 right-0 z-20">
-        <div className="h-0.5 bg-sky-100/40">
+        <div className="h-0.5 bg-blue-100/40">
           <motion.div
             key={currentSlide}
-            className="h-full bg-sky-600"
+            className="h-full bg-blue-600"
             initial={{ width: "0%" }}
             animate={{ width: "100%" }}
             transition={{ duration: 6, ease: "linear" }}

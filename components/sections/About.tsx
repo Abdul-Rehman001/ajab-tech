@@ -48,12 +48,12 @@ export default function AboutPreview() {
   };
 
   return (
-    <section className="relative py-20 bg-gradient-to-br from-slate-50 via-sky-50/30 to-white overflow-hidden">
+    <section className="relative py-20 bg-gradient-to-br from-slate-50 via-blue-50/30 to-white overflow-hidden">
       {/* Radial Pattern Background */}
       <div className="absolute inset-0 opacity-40">
-        <div className="absolute top-10 left-10 w-72 h-72 bg-sky-100 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
+        <div className="absolute top-10 left-10 w-72 h-72 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
         <div className="absolute top-40 right-10 w-96 h-96 bg-purple-100 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-1000"></div>
-        <div className="absolute -bottom-8 left-1/2 w-80 h-80 bg-sky-50 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-500"></div>
+        <div className="absolute -bottom-8 left-1/2 w-80 h-80 bg-blue-50 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-500"></div>
       </div>
 
       {/* Radial Line Pattern Overlay */}
@@ -82,13 +82,13 @@ export default function AboutPreview() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center px-3 py-1 rounded-md bg-sky-50 text-sky-700 text-xs font-medium mb-4 border border-sky-100">
-            <div className="w-1.5 h-1.5 bg-sky-500 rounded-full mr-2" />
+          <div className="inline-flex items-center px-3 py-1 rounded-md bg-blue-50 text-blue-700 text-xs font-medium mb-4 border border-blue-100">
+            <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2" />
             About Our Company
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold mb-4 leading-tight">
-            <span className="bg-gradient-to-r from-slate-900 to-sky-700 bg-clip-text text-transparent">
-              About <span className="text-sky-600">AJAB Tech</span>
+            <span className="bg-gradient-to-r from-slate-900 to-blue-700 bg-clip-text text-transparent">
+              About <span className="text-blue-600">AJAB Tech</span>
             </span>
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto font-light">
@@ -105,15 +105,15 @@ export default function AboutPreview() {
             transition={{ duration: 0.8 }}
           >
             {/* Tab Navigation */}
-            <div className="flex space-x-1 mb-8 bg-white/80 backdrop-blur-sm p-1 rounded-lg border border-sky-100 shadow-sm">
+            <div className="flex space-x-1 mb-8 bg-white/80 backdrop-blur-sm p-1 rounded-lg border border-blue-100 shadow-sm">
               {Object.entries(tabContent).map(([key, content]) => (
                 <button
                   key={key}
                   onClick={() => setActiveTab(key as TabKey)}
                   className={`flex-1 px-4 py-2 text-sm font-medium rounded-md transition-all duration-200 ${
                     activeTab === key
-                      ? "bg-sky-600 text-white shadow-sm"
-                      : "text-slate-600 hover:text-sky-600 hover:bg-sky-50"
+                      ? "bg-blue-600 text-white shadow-sm"
+                      : "text-slate-600 hover:text-blue-600 hover:bg-blue-50"
                   }`}
                 >
                   {content.title}
@@ -127,13 +127,13 @@ export default function AboutPreview() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4 }}
-              className="bg-white/60 backdrop-blur-sm rounded-xl p-6 border border-sky-100 shadow-sm"
+              className="bg-white/60 backdrop-blur-sm rounded-xl p-6 border border-blue-100 shadow-sm"
             >
               <div className="flex items-center mb-4">
                 {(() => {
                   const IconComponent = tabContent[activeTab].icon;
                   return (
-                    <IconComponent className="w-6 h-6 text-sky-600 mr-3" />
+                    <IconComponent className="w-6 h-6 text-blue-600 mr-3" />
                   );
                 })()}
                 <h3 className="text-xl font-semibold text-slate-900">
@@ -145,7 +145,7 @@ export default function AboutPreview() {
                 <ul className="space-y-3">
                   {siteConfig.company.values.map((value, index) => (
                     <li key={index} className="flex items-start">
-                      <ChevronRight className="w-4 h-4 text-sky-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <ChevronRight className="w-4 h-4 text-blue-500 mr-2 mt-0.5 flex-shrink-0" />
                       <span className="text-slate-600 font-light">{value}</span>
                     </li>
                   ))}
@@ -164,24 +164,24 @@ export default function AboutPreview() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="grid grid-cols-3 gap-6 mt-8"
             >
-              <div className="text-center bg-white/60 backdrop-blur-sm rounded-lg p-4 border border-sky-100 shadow-sm">
-                <div className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-sky-600 to-sky-700 bg-clip-text text-transparent">
+              <div className="text-center bg-white/60 backdrop-blur-sm rounded-lg p-4 border border-blue-100 shadow-sm">
+                <div className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">
                   {siteConfig.company.founded}
                 </div>
                 <div className="text-sm text-slate-500 font-medium">
                   Founded
                 </div>
               </div>
-              <div className="text-center bg-white/60 backdrop-blur-sm rounded-lg p-4 border border-sky-100 shadow-sm">
-                <div className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-sky-600 to-sky-700 bg-clip-text text-transparent">
+              <div className="text-center bg-white/60 backdrop-blur-sm rounded-lg p-4 border border-blue-100 shadow-sm">
+                <div className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">
                   {siteConfig.company.employees}
                 </div>
                 <div className="text-sm text-slate-500 font-medium">
                   Team Members
                 </div>
               </div>
-              <div className="text-center bg-white/60 backdrop-blur-sm rounded-lg p-4 border border-sky-100 shadow-sm">
-                <div className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-sky-600 to-sky-700 bg-clip-text text-transparent">
+              <div className="text-center bg-white/60 backdrop-blur-sm rounded-lg p-4 border border-blue-100 shadow-sm">
+                <div className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">
                   {siteConfig.company.clients}
                 </div>
                 <div className="text-sm text-slate-500 font-medium">
@@ -198,7 +198,7 @@ export default function AboutPreview() {
             >
               <Button
                 asChild
-                className="bg-sky-600 hover:bg-sky-700 text-white px-6 py-3 text-sm font-medium rounded-md transition-all duration-200 shadow-sm"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 text-sm font-medium rounded-md transition-all duration-200 shadow-sm"
               >
                 <Link href="/about" className="inline-flex items-center">
                   Learn More About Us
@@ -217,7 +217,7 @@ export default function AboutPreview() {
           >
             {/* Main Image Container */}
             <div className="relative">
-              <div className="aspect-[4/5] bg-gradient-to-br from-sky-50 to-sky-100 rounded-2xl shadow-xl border border-sky-100 overflow-hidden">
+              <div className="aspect-[4/5] bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl shadow-xl border border-blue-100 overflow-hidden">
                 {/* Uncomment and replace with actual image when available */}
                 <Image
                   src={siteConfig.company.images.about?.main || "/about.jpg"}
@@ -230,7 +230,7 @@ export default function AboutPreview() {
             </div>
 
             {/* Background Decoration */}
-            <div className="absolute -z-10 top-8 left-8 w-full h-full bg-gradient-to-br from-sky-200/30 to-purple-200/30 rounded-2xl blur-sm"></div>
+            <div className="absolute -z-10 top-8 left-8 w-full h-full bg-gradient-to-br from-blue-200/30 to-purple-200/30 rounded-2xl blur-sm"></div>
           </motion.div>
         </div>
       </div>

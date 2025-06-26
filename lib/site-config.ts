@@ -392,6 +392,13 @@ export const siteConfig = {
       description:
         "Secure document management and collaboration tools for law firms and professional services.",
     },
+    {
+      id: "professional-services",
+      title: "Legal & Professional Services",
+      icon: "Scale",
+      description:
+        "Secure document management and collaboration tools for law firms and professional services.",
+    },
   ],
 
   // Partners

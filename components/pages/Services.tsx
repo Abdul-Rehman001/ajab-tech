@@ -45,10 +45,10 @@ type Service = {
 
 export default function ServicesPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-sky-50 via-white to-sky-50">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50">
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-sky-800 via-sky-700 to-sky-600"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-800 via-blue-700 to-blue-600"></div>
         <div className='absolute inset-0 bg-[url(&apos;data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="1"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E&apos;)]'></div>
         <div className="relative container px-6 mx-auto">
           <motion.div
@@ -67,7 +67,7 @@ export default function ServicesPage() {
                 Digital Infrastructure
               </span>
             </h1>
-            <p className="text-lg md:text-xl text-sky-200 max-w-2xl mx-auto leading-relaxed font-light">
+            <p className="text-lg md:text-xl text-blue-200 max-w-2xl mx-auto leading-relaxed font-light">
               Professional technology solutions engineered to optimize your
               business operations and accelerate digital transformation
             </p>
@@ -108,28 +108,28 @@ export default function ServicesPage() {
                       <div className="space-y-6">
                         {/* Service Header */}
                         <div className="flex items-start space-x-5">
-                          <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-sky-100 to-sky-200 rounded-lg flex items-center justify-center shadow-md border border-sky-200">
-                            <IconComponent className="h-7 w-7 text-sky-600" />
+                          <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-blue-100 to-blue-200 rounded-lg flex items-center justify-center shadow-md border border-blue-200">
+                            <IconComponent className="h-7 w-7 text-blue-600" />
                           </div>
                           <div className="flex-1 min-w-0">
-                            <h2 className="text-2xl lg:text-3xl font-light text-sky-900 mb-2 leading-tight">
+                            <h2 className="text-2xl lg:text-3xl font-light text-blue-900 mb-2 leading-tight">
                               {service.title}
                             </h2>
-                            <p className="text-base text-sky-600 font-normal">
+                            <p className="text-base text-blue-600 font-normal">
                               {service.subtitle}
                             </p>
                           </div>
                         </div>
 
                         {/* Description */}
-                        <p className="text-base text-sky-600 leading-relaxed font-light">
+                        <p className="text-base text-blue-600 leading-relaxed font-light">
                           {service.description}
                         </p>
 
                         {/* Key Capabilities */}
                         {service.keyCapabilities && (
                           <div className="space-y-4">
-                            <h3 className="text-lg font-normal text-sky-800">
+                            <h3 className="text-lg font-normal text-blue-800">
                               Key Capabilities
                             </h3>
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -139,8 +139,8 @@ export default function ServicesPage() {
                                     key={idx}
                                     className="flex items-center space-x-3 group"
                                   >
-                                    <div className="flex-shrink-0 w-1.5 h-1.5 bg-sky-400 rounded-full group-hover:bg-sky-600 transition-colors"></div>
-                                    <span className="text-sky-700 text-sm font-normal">
+                                    <div className="flex-shrink-0 w-1.5 h-1.5 bg-blue-400 rounded-full group-hover:bg-blue-600 transition-colors"></div>
+                                    <span className="text-blue-700 text-sm font-normal">
                                       {capability}
                                     </span>
                                   </div>
@@ -152,7 +152,7 @@ export default function ServicesPage() {
 
                         {/* Benefits */}
                         <div className="space-y-4">
-                          <h3 className="text-lg font-normal text-sky-800">
+                          <h3 className="text-lg font-normal text-blue-800">
                             Why Choose Us
                           </h3>
                           <div className="space-y-3">
@@ -160,10 +160,10 @@ export default function ServicesPage() {
                               (benefit: string, idx: number) => (
                                 <div
                                   key={idx}
-                                  className="flex items-start space-x-3 p-4 rounded-md bg-sky-50 hover:bg-sky-100 transition-all duration-300 group border border-sky-100"
+                                  className="flex items-start space-x-3 p-4 rounded-md bg-blue-50 hover:bg-blue-100 transition-all duration-300 group border border-blue-100"
                                 >
-                                  <CheckCircle className="h-4 w-4 text-sky-500 mt-0.5 flex-shrink-0 group-hover:text-sky-600 transition-colors" />
-                                  <span className="text-sky-700 font-normal text-sm">
+                                  <CheckCircle className="h-4 w-4 text-blue-500 mt-0.5 flex-shrink-0 group-hover:text-blue-600 transition-colors" />
+                                  <span className="text-blue-700 font-normal text-sm">
                                     {benefit}
                                   </span>
                                 </div>
@@ -175,7 +175,7 @@ export default function ServicesPage() {
                         {/* Technologies */}
                         {service.technologies && (
                           <div className="space-y-4">
-                            <h3 className="text-lg font-normal text-sky-800">
+                            <h3 className="text-lg font-normal text-blue-800">
                               Technologies We Use
                             </h3>
                             <div className="flex flex-wrap gap-2">
@@ -183,7 +183,7 @@ export default function ServicesPage() {
                                 (tech: string, idx: number) => (
                                   <span
                                     key={idx}
-                                    className="px-3 py-1.5 bg-white border border-sky-200 text-sky-700 text-sm font-normal rounded hover:bg-sky-50 hover:border-sky-300 transition-all duration-300 shadow-sm"
+                                    className="px-3 py-1.5 bg-white border border-blue-200 text-blue-700 text-sm font-normal rounded hover:bg-blue-50 hover:border-blue-300 transition-all duration-300 shadow-sm"
                                   >
                                     {tech}
                                   </span>
@@ -198,7 +198,7 @@ export default function ServicesPage() {
                           <Button
                             asChild
                             size="lg"
-                            className="bg-sky-800 hover:bg-sky-900 text-white px-6 py-2.5 rounded shadow-md hover:shadow-lg transform hover:scale-[1.01] transition-all duration-300 group font-normal"
+                            className="bg-blue-800 hover:bg-blue-900 text-white px-6 py-2.5 rounded shadow-md hover:shadow-lg transform hover:scale-[1.01] transition-all duration-300 group font-normal"
                           >
                             <Link
                               href="/contact"
@@ -220,8 +220,8 @@ export default function ServicesPage() {
                       }`}
                     >
                       <div className="relative group">
-                        <div className="relative aspect-square bg-gradient-to-br from-sky-50 via-white to-sky-100 rounded-lg overflow-hidden shadow-lg shadow-sky-200/50 group-hover:shadow-xl group-hover:shadow-sky-200/60 transition-all duration-500 border border-sky-200">
-                          <div className="absolute inset-0 bg-gradient-to-br from-sky-500/5 to-sky-600/5"></div>
+                        <div className="relative aspect-square bg-gradient-to-br from-blue-50 via-white to-blue-100 rounded-lg overflow-hidden shadow-lg shadow-blue-200/50 group-hover:shadow-xl group-hover:shadow-blue-200/60 transition-all duration-500 border border-blue-200">
+                          <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-blue-600/5"></div>
 
                           {/* ✅ Replace IconComponent with Image */}
                           <img
@@ -242,7 +242,7 @@ export default function ServicesPage() {
 
       {/* Enhanced CTA Section */}
       <section className="py-24 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-sky-800 via-sky-700 to-sky-600"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-800 via-blue-700 to-blue-600"></div>
         <div className='absolute inset-0 bg-[url(&apos;data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="1"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E&apos;)] opacity-50'></div>
         <div className="relative container px-6 mx-auto">
           <motion.div
@@ -262,7 +262,7 @@ export default function ServicesPage() {
                 Solutions Together
               </span>
             </h2>
-            <p className="text-lg text-sky-200 mb-10 leading-relaxed max-w-2xl mx-auto font-light">
+            <p className="text-lg text-blue-200 mb-10 leading-relaxed max-w-2xl mx-auto font-light">
               Partner with our expert team to implement robust technology
               solutions that drive measurable business results
             </p>
@@ -270,7 +270,7 @@ export default function ServicesPage() {
               <Button
                 asChild
                 size="lg"
-                className="bg-white text-sky-800 hover:bg-sky-50 px-6 py-2.5 rounded shadow-md hover:shadow-lg transform hover:scale-[1.01] transition-all duration-300 group font-normal"
+                className="bg-white text-blue-800 hover:bg-blue-50 px-6 py-2.5 rounded shadow-md hover:shadow-lg transform hover:scale-[1.01] transition-all duration-300 group font-normal"
               >
                 <Link href="/contact" className="flex items-center space-x-2">
                   <span>Start Your Project</span>

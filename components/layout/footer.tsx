@@ -42,9 +42,9 @@ export function Footer() {
   };
 
   return (
-    <footer className="relative bg-gradient-to-br from-sky-100 via-white to-sky-50 border-t border-sky-100/50">
+    <footer className="relative bg-gradient-to-br from-blue-100 via-white to-blue-50 border-t border-blue-100/50">
       {/* Background Pattern */}
-      <div className="absolute inset-0 bg-gradient-to-br from-sky-50/20 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-50/20 to-transparent" />
       <div
         className="absolute inset-0"
         style={{
@@ -66,10 +66,10 @@ export function Footer() {
           <motion.div variants={itemVariants} className="space-y-6">
             <div className="flex items-center space-x-3 group">
               <div className="relative">
-                <div className="h-9 w-9 rounded-md bg-gradient-to-br from-sky-600 to-sky-700 shadow-sm transition-transform duration-200 group-hover:scale-105" />
-                <div className="absolute inset-0 h-9 w-9 rounded-md bg-gradient-to-br from-sky-400 to-sky-500 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+                <div className="h-9 w-9 rounded-md bg-gradient-to-br from-blue-600 to-blue-700 shadow-sm transition-transform duration-200 group-hover:scale-105" />
+                <div className="absolute inset-0 h-9 w-9 rounded-md bg-gradient-to-br from-blue-400 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
               </div>
-              <span className="text-2xl font-semibold bg-gradient-to-r from-slate-900 to-sky-700 bg-clip-text text-transparent">
+              <span className="text-2xl font-semibold bg-gradient-to-r from-slate-900 to-blue-700 bg-clip-text text-transparent">
                 {siteConfig.name}
               </span>
             </div>
@@ -85,9 +85,9 @@ export function Footer() {
                 <Link
                   key={index}
                   href={href}
-                  className="group p-2 rounded-md bg-white/60 backdrop-blur-sm border border-sky-100/50 hover:border-sky-200/50 hover:bg-sky-50/80 transition-all duration-200 shadow-sm hover:shadow-md"
+                  className="group p-2 rounded-md bg-white/60 backdrop-blur-sm border border-blue-100/50 hover:border-blue-200/50 hover:bg-blue-50/80 transition-all duration-200 shadow-sm hover:shadow-md"
                 >
-                  <Icon className="h-4 w-4 text-slate-600 group-hover:text-sky-600 transition-colors duration-200" />
+                  <Icon className="h-4 w-4 text-slate-600 group-hover:text-blue-600 transition-colors duration-200" />
                 </Link>
               ))}
             </div>
@@ -109,9 +109,9 @@ export function Footer() {
                 >
                   <Link
                     href={item.href}
-                    className="group flex items-center space-x-2 text-slate-600 hover:text-sky-600 transition-all duration-200 text-sm font-medium py-1"
+                    className="group flex items-center space-x-2 text-slate-600 hover:text-blue-600 transition-all duration-200 text-sm font-medium py-1"
                   >
-                    <div className="w-1 h-1 rounded-full bg-sky-300 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+                    <div className="w-1 h-1 rounded-full bg-blue-300 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
                     <span className="group-hover:translate-x-1 transition-transform duration-200">
                       {item.name}
                     </span>
@@ -135,9 +135,9 @@ export function Footer() {
                 >
                   <Link
                     href={`/services#${service.id}`}
-                    className="group flex items-center space-x-2 text-slate-600 hover:text-sky-600 transition-all duration-200 text-sm font-medium py-1"
+                    className="group flex items-center space-x-2 text-slate-600 hover:text-blue-600 transition-all duration-200 text-sm font-medium py-1"
                   >
-                    <div className="w-1 h-1 rounded-full bg-sky-300 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+                    <div className="w-1 h-1 rounded-full bg-blue-300 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
                     <span className="group-hover:translate-x-1 transition-transform duration-200">
                       {service.title}
                     </span>
@@ -173,10 +173,10 @@ export function Footer() {
                 >
                   <Link
                     href={href}
-                    className="group flex items-start space-x-3 p-2 rounded-md hover:bg-sky-50/50 transition-all duration-200"
+                    className="group flex items-start space-x-3 p-2 rounded-md hover:bg-blue-50/50 transition-all duration-200"
                   >
-                    <div className="p-1.5 rounded-md bg-sky-100/80 group-hover:bg-sky-200/80 transition-colors duration-200 mt-0.5">
-                      <Icon className="h-3.5 w-3.5 text-sky-600" />
+                    <div className="p-1.5 rounded-md bg-blue-100/80 group-hover:bg-blue-200/80 transition-colors duration-200 mt-0.5">
+                      <Icon className="h-3.5 w-3.5 text-blue-600" />
                     </div>
                     <span className="text-slate-600 text-sm leading-relaxed group-hover:text-slate-900 transition-colors duration-200">
                       {text}
@@ -199,7 +199,7 @@ export function Footer() {
                 onClick={() =>
                   setCurrentLang(currentLang === "en" ? "ar" : "en")
                 }
-                className="flex items-center space-x-2 px-4 py-2 text-sm font-medium text-slate-700 hover:text-sky-600 hover:bg-sky-50/80 rounded-md border border-sky-100/50 bg-white/60 backdrop-blur-sm transition-all duration-200 w-full justify-start"
+                className="flex items-center space-x-2 px-4 py-2 text-sm font-medium text-slate-700 hover:text-blue-600 hover:bg-blue-50/80 rounded-md border border-blue-100/50 bg-white/60 backdrop-blur-sm transition-all duration-200 w-full justify-start"
               >
                 <Globe className="h-4 w-4" />
                 <span>{currentLang === "en" ? "العربية" : "English"}</span>
@@ -214,7 +214,7 @@ export function Footer() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
           viewport={{ once: true }}
-          className="mt-12 pt-8 border-t border-sky-100/50"
+          className="mt-12 pt-8 border-t border-blue-100/50"
         >
           <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
             <p className="text-slate-500 text-sm">
@@ -224,13 +224,13 @@ export function Footer() {
             <div className="flex items-center space-x-6 text-sm">
               <Link
                 href="/privacy"
-                className="text-slate-500 hover:text-sky-600 transition-colors duration-200 font-medium"
+                className="text-slate-500 hover:text-blue-600 transition-colors duration-200 font-medium"
               >
                 Privacy Policy
               </Link>
               <Link
                 href="/terms"
-                className="text-slate-500 hover:text-sky-600 transition-colors duration-200 font-medium"
+                className="text-slate-500 hover:text-blue-600 transition-colors duration-200 font-medium"
               >
                 Terms of Service
               </Link>
