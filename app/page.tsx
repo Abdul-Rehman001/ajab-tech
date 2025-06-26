@@ -1,7 +1,7 @@
 "use client";
 
 import { HeroSlider } from "@/components/ui/hero-slider";
-import { ServicesPreview } from "@/components/sections/services-preview";
+// import { ServicesPreview } from "@/components/sections/services-preview";
 import { WhyChooseUs } from "@/components/sections/why-choose-us";
 import { PartnersSlider } from "@/components/sections/partners-slider";
 import Link from "next/link";
@@ -27,8 +27,8 @@ export default function HomePage() {
       {/* About Preview */}
       <AboutPage />
 
-      {/* Services Preview */}
-      <ServicesPreview />
+      {/* Services Preview
+      <ServicesPreview /> */}
 
       {/* Industries We Serve */}
       <IndustriesWeServe />
