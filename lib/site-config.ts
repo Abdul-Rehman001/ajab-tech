@@ -21,7 +21,6 @@ export const siteConfig = {
     facebook: "https://facebook.com/ajabtech",
   },
 
-  // Hero Slider Content
   heroSlides: [
     {
       id: 1,
@@ -32,31 +31,76 @@ export const siteConfig = {
     },
     {
       id: 2,
-      image: "/slide2.webp",
-      tagline: "Empowering Your Business Through Technology",
-      subtitle: "Comprehensive IT consulting and managed services",
-      cta: "Get Started",
+      image:
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      tagline: "Data • Analytics • AI Solutions",
+      subtitle:
+        "Transform Data Into Intelligence. Turn Intelligence Into Growth",
+      cta: "Learn More",
     },
     {
       id: 3,
-      image: "/slide3.webp",
-      tagline: "Innovation Meets Excellence",
-      subtitle: "Transforming businesses with cutting-edge technology",
-      cta: "Learn More",
+      image:
+        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80",
+      tagline: "Digital Transformation at Scale",
+      subtitle: "Cloud-First Strategy, Solutions & Services",
+      cta: "Get Started",
     },
     {
       id: 4,
-      image: "/slide4.jpg",
-      tagline: "Innovation Meets Excellence",
-      subtitle: "Transforming businesses with cutting-edge technology",
-      cta: "Learn More",
+      image:
+        "https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      tagline: "Robust Cyber Defence & Compliance",
+      subtitle: "Secure. Compliant. Future-Ready Infrastructure",
+      cta: "Discover More",
     },
     {
       id: 5,
-      image: "/slide5.jpg",
-      tagline: "Innovation Meets Excellence",
-      subtitle: "Transforming businesses with cutting-edge technology",
+      image:
+        "https://images.unsplash.com/photo-1578866867823-0ec57f73542a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      tagline: "Industry 4.0 Solutions",
+      subtitle: "Digital Factories. Smart Operations. Intelligent Decisions",
+      cta: "Explore Solutions",
+    },
+    {
+      id: 6,
+      image:
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2015&q=80",
+      tagline: "ERP Solutions",
+      subtitle: "That Power Your Business Forward",
+      cta: "Get Started",
+    },
+    {
+      id: 7,
+      image:
+        "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      tagline: "CRM • API Integration • Business Intelligence",
+      subtitle: "Connecting Your Business. Empowering Your Data",
       cta: "Learn More",
+    },
+    {
+      id: 8,
+      image:
+        "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      tagline: "Information Management & ITSM",
+      subtitle: "Organize Information. Optimize IT. Drive National Impact",
+      cta: "Discover More",
+    },
+    {
+      id: 9,
+      image:
+        "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      tagline: "QHSE Digital Solutions",
+      subtitle: "Enhancing Safety. Ensuring Quality. Empowering Sustainability",
+      cta: "Explore Solutions",
+    },
+    {
+      id: 10,
+      image:
+        "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      tagline: "IT Talent • Workforce Localization • Training",
+      subtitle: "Upskill. Empower. Deliver Saudization in IT Functions",
+      cta: "Get Started",
     },
   ],
 
@@ -505,7 +549,7 @@ export const siteConfig = {
     // New image configurations
     images: {
       about: {
-        main: "/about.jpg", // Main about section image
+        main: "https://www.envacgroup.com/wp-content/uploads/2024/11/kafd-building-2-1-1920x1080-1.jpg",
         alt: "AJAB Tech professional team working on innovative solutions",
         fallback: "/images/about/office-building.jpg", // Fallback image
       },
@@ -594,7 +638,6 @@ export const siteConfig = {
       { name: "About", href: "/about" },
       { name: "Services", href: "/services" },
       { name: "Industries", href: "/industries" },
-      { name: "Partners", href: "/partners" },
       { name: "Why AJAB", href: "/why-ajab" },
       { name: "Contact", href: "/contact" },
     ],

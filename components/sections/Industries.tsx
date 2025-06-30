@@ -34,7 +34,7 @@ const iconMap = {
 
 export default function IndustriesPage() {
   return (
-    <div className="min-h-screen pt-16">
+    <div className="min-h-screen pt-4">
       {/* Hero Section */}
       <section className="relative py-24 bg-gradient-to-br from-slate-50 via-blue-50/30 to-white overflow-hidden">
         {/* Animated Background Elements */}

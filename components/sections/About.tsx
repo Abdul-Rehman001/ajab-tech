@@ -16,10 +16,10 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-type TabKey = "mission" | "vision" | "values";
+type TabKey = "vision" | "mission" | "values";
 
 export default function AboutPreview() {
-  const [activeTab, setActiveTab] = useState<TabKey>("mission");
+  const [activeTab, setActiveTab] = useState<TabKey>("vision");
 
   const tabContent: Record<
     TabKey,
@@ -29,16 +29,17 @@ export default function AboutPreview() {
       icon: React.ElementType;
     }
   > = {
-    mission: {
-      title: "Our Mission",
-      content: siteConfig.company.mission,
-      icon: Target,
-    },
     vision: {
       title: "Our Vision",
       content: siteConfig.company.vision,
       icon: Eye,
     },
+    mission: {
+      title: "Our Mission",
+      content: siteConfig.company.mission,
+      icon: Target,
+    },
+
     values: {
       title: "Our Values",
       content:
@@ -220,7 +221,10 @@ export default function AboutPreview() {
               <div className="aspect-[4/5] bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl shadow-xl border border-blue-100 overflow-hidden">
                 {/* Uncomment and replace with actual image when available */}
                 <Image
-                  src={siteConfig.company.images.about?.main || "/about.jpg"}
+                  src={
+                    siteConfig.company.images.about?.main ||
+                    "https://www.envacgroup.com/wp-content/uploads/2024/11/kafd-building-2-1-1920x1080-1.jpg"
+                  }
                   alt="AJAB Tech Team"
                   className="w-full h-full object-cover"
                   width={800}
