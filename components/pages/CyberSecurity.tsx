@@ -588,6 +588,27 @@ const CybersecurityServicesPage = () => {
           </motion.div>
         </div>
       </section>
+      {/* Cloud Infrastructure Modernization Section */}
+      <section className="py-12 bg-white">
+        <div className="max-w-xl mx-auto bg-slate-50 rounded-xl shadow p-6">
+          <h2 className="text-xl font-semibold text-blue-700 mb-1">
+            Secure. Compliant. Future-Ready.
+          </h2>
+          <p className="text-slate-700 mb-4 font-medium">
+            Cloud Infrastructure Modernization
+          </p>
+          <h3 className="text-blue-600 font-medium mb-2">Frameworks</h3>
+          <ul className="list-disc list-inside text-slate-600 space-y-1">
+            <li>ISO 27001, ISO 27005, ISO 9001</li>
+            <li>NCA</li>
+            <li>SAMA</li>
+            <li>CITC</li>
+            <li>NDMO &amp; PDPL</li>
+            <li>SFDA</li>
+            <li>Aramco TPCS</li>
+          </ul>
+        </div>
+      </section>
 
       {/* Why Choose Us Section */}
       <section className="py-20 bg-white">

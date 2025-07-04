@@ -7,10 +7,10 @@ export const siteConfig = {
 
   // Contact Information
   contact: {
-    phone: "+966-50-123-4567",
-    whatsapp: "966501234567",
+    phone: "+966 567 353 413",
+    whatsapp: "966 567 353 413",
     email: "info@ajabtech.com",
-    address: "King Fahd Road, Riyadh 12345, Saudi Arabia",
+    address: "Abi Tahir Al Dhahabi St, Al Mutamarat, Riyadh 12711",
     coordinates: { lat: 24.7136, lng: 46.6753 },
   },
 
@@ -408,13 +408,7 @@ export const siteConfig = {
       description:
         "Industrial IoT, automation, and ERP solutions for manufacturing companies.",
     },
-    {
-      id: "government",
-      title: "Government",
-      icon: "Building",
-      description:
-        "Secure, scalable IT infrastructure for government agencies and public sector organizations.",
-    },
+
     {
       id: "retail",
       title: "Retail & eCommerce",
@@ -431,13 +425,6 @@ export const siteConfig = {
     },
     {
       id: "legal",
-      title: "Legal & Professional Services",
-      icon: "Scale",
-      description:
-        "Secure document management and collaboration tools for law firms and professional services.",
-    },
-    {
-      id: "professional-services",
       title: "Legal & Professional Services",
       icon: "Scale",
       description:

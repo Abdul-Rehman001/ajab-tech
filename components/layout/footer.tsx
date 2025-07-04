@@ -14,6 +14,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/lib/site-config";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export function Footer() {
   const [currentLang, setCurrentLang] = useState("en");
@@ -65,13 +66,20 @@ export function Footer() {
           {/* Company Info */}
           <motion.div variants={itemVariants} className="space-y-6">
             <div className="flex items-center space-x-3 group">
-              <div className="relative">
-                <div className="h-9 w-9 rounded-md bg-gradient-to-br from-blue-600 to-blue-700 shadow-sm transition-transform duration-200 group-hover:scale-105" />
-                <div className="absolute inset-0 h-9 w-9 rounded-md bg-gradient-to-br from-blue-400 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
-              </div>
-              <span className="text-2xl font-semibold bg-gradient-to-r from-slate-900 to-blue-700 bg-clip-text text-transparent">
-                {siteConfig.name}
-              </span>
+              {/* Logo */}
+              <Link
+                href="/"
+                className="flex items-center space-x-3 group flex-shrink-0"
+              >
+                <Image
+                  src="./logo.png"
+                  alt="AJAB Tech Logo"
+                  width={192}
+                  height={80}
+                  className="h-12 w-auto sm:h-16 lg:h-20 lg:w-48 object-contain"
+                  priority
+                />
+              </Link>
             </div>
             <p className="text-slate-600 text-sm leading-relaxed max-w-sm">
               {siteConfig.description}
@@ -125,7 +133,7 @@ export function Footer() {
           <motion.div variants={itemVariants} className="space-y-6">
             <h3 className="text-lg font-semibold text-slate-900">Services</h3>
             <div className="space-y-3">
-              {siteConfig.services.slice(0, 4).map((service, index) => (
+              {siteConfig.services.map((service, index) => (
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, x: -10 }}

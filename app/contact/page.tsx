@@ -37,7 +37,50 @@ export default function ContactPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+
+    // Create email subject and body
+    const subject = `Contact Form Submission - ${formData.name}`;
+    const body = `
+Name: ${formData.name}
+Email: ${formData.email}
+Company: ${formData.company || "Not provided"}
+Phone: ${formData.phone || "Not provided"}
+Service Interested In: ${formData.service || "Not specified"}
+
+Message:
+${formData.message}
+
+
+    `.trim();
+
+    // Encode the subject and body for URL
+    const encodedSubject = encodeURIComponent(subject);
+    const encodedBody = encodeURIComponent(body);
+
+    // Create Gmail compose URL
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${siteConfig.contact.email}&su=${encodedSubject}&body=${encodedBody}`;
+
+    // Open Gmail in a new tab
+    window.open(gmailUrl, "_blank");
+
+    // Reset form
+    setFormData({
+      name: "",
+      email: "",
+      company: "",
+      phone: "",
+      service: "",
+      message: "",
+    });
+  };
+
+  // WhatsApp message handler
+  const handleWhatsAppClick = () => {
+    const message =
+      "Hi! I'm interested in your services. Could you please provide more information?";
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodedMessage}`;
+    window.open(whatsappUrl, "_blank");
   };
 
   return (
@@ -51,10 +94,10 @@ export default function ContactPage() {
             transition={{ duration: 0.7 }}
             className="text-4xl md:text-5xl font-bold mb-4"
           >
-            Let’s Talk
+            Let's Talk
           </motion.h1>
           <p className="text-lg md:text-xl text-blue-100">
-            We're here to help. Send us a message and we’ll respond as soon as
+            We're here to help. Send us a message and we'll respond as soon as
             possible.
           </p>
         </div>
@@ -74,7 +117,8 @@ export default function ContactPage() {
               <CardHeader>
                 <CardTitle className="text-xl">Send a Message</CardTitle>
                 <CardDescription>
-                  Let us know how we can help. We'll get back to you shortly.
+                  Fill out the form below and we'll redirect you to Gmail to
+                  send your message.
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -148,7 +192,7 @@ export default function ContactPage() {
                     size="lg"
                     className="bg-blue-600 hover:bg-blue-700 text-white w-full"
                   >
-                    Submit
+                    Send via Gmail
                   </Button>
                 </form>
               </CardContent>
@@ -176,16 +220,21 @@ export default function ContactPage() {
                   icon: <Phone className="text-blue-600" />,
                   title: "Phone",
                   content: siteConfig.contact.phone,
+                  clickable: true,
+                  href: `tel:${siteConfig.contact.phone}`,
                 },
                 {
                   icon: <Mail className="text-blue-600" />,
                   title: "Email",
                   content: siteConfig.contact.email,
+                  clickable: true,
+                  href: `mailto:${siteConfig.contact.email}`,
                 },
                 {
                   icon: <MapPin className="text-blue-600" />,
                   title: "Address",
                   content: siteConfig.contact.address,
+                  clickable: false,
                 },
               ].map((item, index) => (
                 <Card
@@ -199,7 +248,16 @@ export default function ContactPage() {
                     <h4 className="font-semibold text-gray-900">
                       {item.title}
                     </h4>
-                    <p className="text-gray-600">{item.content}</p>
+                    {item.clickable ? (
+                      <a
+                        href={item.href}
+                        className="text-gray-600 hover:text-blue-600 transition-colors"
+                      >
+                        {item.content}
+                      </a>
+                    ) : (
+                      <p className="text-gray-600">{item.content}</p>
+                    )}
                   </div>
                 </Card>
               ))}
@@ -213,41 +271,17 @@ export default function ContactPage() {
                     <h4 className="font-semibold text-gray-900">WhatsApp</h4>
                     <p className="text-gray-600">Reach out to us instantly.</p>
                     <Button
-                      asChild
+                      onClick={handleWhatsAppClick}
                       size="sm"
                       className="mt-2 bg-green-600 hover:bg-green-700"
                     >
-                      <a
-                        href={`https://wa.me/${siteConfig.contact.whatsapp}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Chat Now
-                      </a>
+                      Chat Now
                     </Button>
                   </div>
                 </div>
               </Card>
             </div>
           </motion.div>
-        </div>
-      </section>
-
-      {/* Map Section */}
-      <section className="py-16 bg-sky-50">
-        <div className="container mx-auto px-4 text-center">
-          <motion.h2
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-3xl font-bold mb-6"
-          >
-            Our Location
-          </motion.h2>
-          <div className="h-80 w-full bg-gray-300 rounded-lg flex items-center justify-center text-gray-600">
-            Map integration coming soon...
-          </div>
         </div>
       </section>
     </div>
