@@ -8,7 +8,7 @@ export const siteConfig = {
   // Contact Information
   contact: {
     phone: "+966 567 353 413",
-    whatsapp: "966 567 353 413",
+    whatsapp: "966567353413",
     email: "info@ajabtech.com",
     address: "Abi Tahir Al Dhahabi St, Al Mutamarat, Riyadh 12711",
     coordinates: { lat: 24.7136, lng: 46.6753 },
@@ -626,6 +626,7 @@ export const siteConfig = {
       { name: "Services", href: "/services" },
       { name: "Industries", href: "/industries" },
       { name: "Why AJAB", href: "/why-ajab" },
+      { name: "Partners", href: "/partners" },
       { name: "Contact", href: "/contact" },
     ],
   },
