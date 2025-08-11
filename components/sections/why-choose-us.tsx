@@ -102,7 +102,6 @@ export function WhyChooseUs() {
             and opportunities of the Middle East technology landscape.
           </p>
         </div>
-
         {/* Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
           {whyChooseUsData.map((item, index) => {
@@ -153,40 +152,6 @@ export function WhyChooseUs() {
             );
           })}
         </div>
-
-        {/* Bottom CTA Section */}
-        <div className="text-center mb-20">
-          <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 sm:p-12 border border-blue-100 shadow-sm max-w-4xl mx-auto">
-            <div className="flex flex-col lg:flex-row items-center gap-8">
-              <div className="flex-1 text-center lg:text-left">
-                <h3 className="text-3xl sm:text-4xl font-semibold mb-4">
-                  <span className="bg-gradient-to-r from-slate-900 to-blue-700 bg-clip-text text-transparent">
-                    Ready to Transform Your{" "}
-                    <span className="text-blue-600">Business?</span>
-                  </span>
-                </h3>
-                <p className="text-slate-600 font-light text-lg">
-                  Join hundreds of companies who trust AJAB Tech for their
-                  digital transformation journey.
-                </p>
-              </div>
-
-              <div className="flex flex-col sm:flex-row gap-4 shrink-0">
-                <button className="group px-8 py-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-medium rounded-lg transition-all duration-300 shadow-sm hover:shadow-md">
-                  <span className="flex items-center">
-                    Get Started Today
-                    <ChevronRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </span>
-                </button>
-
-                <button className="px-8 py-3 border border-blue-200 text-slate-700 font-medium rounded-lg hover:bg-blue-50 hover:border-blue-300 hover:text-blue-700 transition-all duration-300">
-                  Schedule Consultation
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Stats Row */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-12 border-t border-blue-100">
           {[

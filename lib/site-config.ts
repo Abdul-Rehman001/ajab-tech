@@ -425,10 +425,17 @@ export const siteConfig = {
     },
     {
       id: "legal",
-      title: "Legal & Professional Services",
+      title: "Professional Services",
       icon: "Scale",
       description:
         "Secure document management and collaboration tools for law firms and professional services.",
+    },
+    {
+      id: "real-estate",
+      title: "Real Estate",
+      icon: "Building",
+      description:
+        "Smart property management and collaboration tools for real estate professionals and agencies.",
     },
   ],
 
@@ -531,7 +538,7 @@ export const siteConfig = {
     ],
     founded: "2015",
     employees: "50+",
-    clients: "200+",
+    clients: "100+",
 
     // New image configurations
     images: {

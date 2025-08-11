@@ -193,26 +193,6 @@ export function Footer() {
                 </motion.div>
               ))}
             </div>
-
-            {/* Language Toggle */}
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3, duration: 0.3 }}
-              viewport={{ once: true }}
-            >
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={() =>
-                  setCurrentLang(currentLang === "en" ? "ar" : "en")
-                }
-                className="flex items-center space-x-2 px-4 py-2 text-sm font-medium text-slate-700 hover:text-blue-600 hover:bg-blue-50/80 rounded-md border border-blue-100/50 bg-white/60 backdrop-blur-sm transition-all duration-200 w-full justify-start"
-              >
-                <Globe className="h-4 w-4" />
-                <span>{currentLang === "en" ? "العربية" : "English"}</span>
-              </Button>
-            </motion.div>
           </motion.div>
         </motion.div>
 

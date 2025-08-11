@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Building2, ChevronRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const PartnersComponent = () => {
   const partnersData = [
@@ -81,6 +82,22 @@ const PartnersComponent = () => {
           name: "Kaspersky",
           logo: "https://cdn.brandfetch.io/idedmP5Q8M/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1692821436989",
         },
+        {
+          name: "Sectona",
+          logo: "https://sectona.com/wp-content/uploads/2023/10/Sectona-Logo.webp",
+        },
+        {
+          name: "Fortinet",
+          logo: "https://www.fortinet.com/content/dam/fortinet/images/general/fortinet-logo.svg",
+        },
+        {
+          name: "TrenMicro",
+          logo: "https://cdn.brandfetch.io/idr-d475UT/w/382/h/382/theme/dark/icon.png?c=1dxbfHSJFAPEGdCLU4o5B",
+        },
+        {
+          name: "DarkTrace",
+          logo: "https://cdn.prod.website-files.com/62e3de3c93a3f82e39b780db/666835a138d48796efe486d7_DT-Brandhub-logo.svg",
+        },
       ],
     },
     {
@@ -102,6 +119,18 @@ const PartnersComponent = () => {
         {
           name: "Uipath",
           logo: "https://cdn.brandfetch.io/idEaAShmlC/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1667779183199",
+        },
+        {
+          name: "General Electrics",
+          logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/General_Electric_logo.svg/750px-General_Electric_logo.svg.png",
+        },
+        {
+          name: "MS Power Automate",
+          logo: "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Hero_PAU_icon?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=96&hei=96&qlt=100&fit=constrain",
+        },
+        {
+          name: "Automation Anywhere",
+          logo: "https://www.automationanywhere.com/sites/default/files/images/default-images/logo-aa-new.svg",
         },
       ],
     },
@@ -147,6 +176,22 @@ const PartnersComponent = () => {
           name: "IBM WebMethods",
           logo: "https://store-images.s-microsoft.com/image/apps.38214.a02a684a-e90b-4292-bdd1-1b7ee9d2af8d.6dcd9984-dee8-4bb5-86c2-d6d76d33a801.89b0feaf-d2d6-4763-8de7-dbd21165420e",
         },
+        {
+          name: "Qlik",
+          logo: "https://assets.qlik.com/image/upload/q_auto/v1713297745/qlik/logos/logo-qlik_d49uek.svg",
+        },
+        {
+          name: "Google APIGEE",
+          logo: "https://www.gstatic.com/bricks/image/b45728f17bf88494b25d78a9fb27ae538e6eb4a06a972f6502b7410ff714532d.svg",
+        },
+        {
+          name: "MuleSoft",
+          logo: "https://www.salesforce.com/news/wp-content/uploads/sites/3/2023/09/MuleSoft-From-Salesforce-Logo-RGB.png",
+        },
+        {
+          name: "MS Power BI",
+          logo: "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Hero_BPI_icon1?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=96&hei=96&qlt=100&fmt=png-alpha&fit=constrain",
+        },
       ],
     },
     {
@@ -163,8 +208,16 @@ const PartnersComponent = () => {
         },
 
         {
+          name: "MS Sharepoint",
+          logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Microsoft_Office_SharePoint_%282019%E2%80%93present%29.svg/768px-Microsoft_Office_SharePoint_%282019%E2%80%93present%29.svg.png?20190925170659",
+        },
+        {
           name: "ManageEngine",
           logo: "https://cdn.brandfetch.io/idHLy8nQ41/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1695289842818",
+        },
+        {
+          name: "BMC",
+          logo: "https://www.bmc.com/content/dam/bmc/graphics/bmc-logo.svg",
         },
       ],
     },
@@ -183,6 +236,10 @@ const PartnersComponent = () => {
         {
           name: "Oracle",
           logo: "https://cdn.brandfetch.io/idnq7H7qT0/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1667576597046",
+        },
+        {
+          name: "IBM Maxino",
+          logo: "https://store-images.s-microsoft.com/image/apps.38214.a02a684a-e90b-4292-bdd1-1b7ee9d2af8d.6dcd9984-dee8-4bb5-86c2-d6d76d33a801.89b0feaf-d2d6-4763-8de7-dbd21165420e",
         },
       ],
     },
@@ -335,10 +392,12 @@ const PartnersComponent = () => {
               Leverage our extensive network of technology partners to
               accelerate your digital transformation journey.
             </p>
-            <button className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-all duration-200 shadow-sm hover:shadow-md">
-              Get Started Today
-              <ChevronRight className="w-4 h-4 ml-2" />
-            </button>
+            <Link href="/contact">
+              <button className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-all duration-200 shadow-sm hover:shadow-md">
+                Get Started Today
+                <ChevronRight className="w-4 h-4 ml-2" />
+              </button>
+            </Link>
           </div>
         </motion.div>
       </div>

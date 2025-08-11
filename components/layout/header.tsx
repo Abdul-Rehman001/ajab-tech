@@ -167,17 +167,14 @@ export function Header() {
           {/* Right Side Actions */}
           <div className="flex items-center space-x-3">
             {/* Language Toggle - Desktop */}
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => setCurrentLang(currentLang === "en" ? "ar" : "en")}
-              className="hidden lg:flex items-center space-x-2 px-4 py-2 text-sm font-medium text-slate-700 hover:text-sky-600 hover:bg-sky-50/80 rounded-md border border-sky-100/50 bg-white/60 backdrop-blur-sm transition-all duration-200"
-            >
-              <Globe className="h-4 w-4" />
-              <span className="whitespace-nowrap">
-                {currentLang === "en" ? "العربية" : "English"}
-              </span>
-            </Button>
+            <Link href="/contact">
+              <Button
+                size="sm"
+                className="px-4 py-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-md transition-all duration-200"
+              >
+                Get Started
+              </Button>
+            </Link>
 
             {/* Mobile Menu */}
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -319,16 +316,14 @@ export function Header() {
                     transition={{ duration: 0.3, delay: 0.3 }}
                     className="px-4"
                   >
-                    <Button
-                      variant="ghost"
-                      onClick={() =>
-                        setCurrentLang(currentLang === "en" ? "ar" : "en")
-                      }
-                      className="w-full justify-start px-4 py-3 text-base font-medium text-slate-700 hover:text-sky-600 hover:bg-sky-50/80 rounded-md border border-sky-100/50 bg-white/60"
-                    >
-                      <Globe className="h-5 w-5 mr-3" />
-                      {currentLang === "en" ? "العربية" : "English"}
-                    </Button>
+                    <Link href="/contact">
+                      <Button
+                        size="sm"
+                        className="px-4 py-2 text-sm font-medium text-white bg-blue-600 hover:bg-sky-700 rounded-md transition-all duration-200"
+                      >
+                        Get Started
+                      </Button>
+                    </Link>
                   </motion.div>
 
                   {/* Mobile CTA */}

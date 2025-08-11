@@ -60,12 +60,6 @@ export default function AboutSectionTwo() {
     },
   ];
 
-  const stats = [
-    { value: "150+", label: "Years Combined Experience", icon: Award },
-    { value: "24/7", label: "Customer Support", icon: Heart },
-    { value: "100%", label: "Client Satisfaction", icon: Star },
-  ];
-
   return (
     <section className="relative py-20 bg-gradient-to-tr from-white via-slate-50/50 to-blue-50/30 overflow-hidden">
       {/* Background Pattern */}
@@ -191,27 +185,6 @@ export default function AboutSectionTwo() {
                   make a difference for all our clients.
                 </p>
               </div>
-            </div>
-
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-4">
-              {stats.map((stat, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="text-center bg-white/70 backdrop-blur-sm rounded-xl p-4 border border-slate-200 shadow-sm hover:shadow-md transition-all duration-300"
-                >
-                  <stat.icon className="w-6 h-6 text-blue-600 mx-auto mb-2" />
-                  <div className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-600 to-sky-600 bg-clip-text text-transparent">
-                    {stat.value}
-                  </div>
-                  <div className="text-xs text-slate-500 font-medium leading-tight">
-                    {stat.label}
-                  </div>
-                </motion.div>
-              ))}
             </div>
           </motion.div>
 
